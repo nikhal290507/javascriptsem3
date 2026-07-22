@@ -50,6 +50,9 @@ obj2.name = "Reet";
 console.log(obj2.name); 
 console.log(obj2.myage);
 
+
+// freeze is used to prevent any modifications to an object, including adding, removing, or changing properties.
+
 Object.freeze(obj2);
 obj2.myage = 20;
 obj2.name = "Reet";
