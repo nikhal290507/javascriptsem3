@@ -72,10 +72,16 @@
 // show();
 
 
+const mydiv=document.querySelector('div');
+
 const my_api=fetch("https://fakestoreapi.com/products/");
 my_api.then((res)=>res.json()).then((res)=>{
     console.log(res)
     res.forEach((item)=>{
-        console.log(item)
+        // console.log(item)
+
+        const card = document.createElement('div');
+        card.innerHTML=`<img src=${item.image} alt=${item.title}>`
+        mydiv.appendChild(card);
     })
 })
